@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
  
-public class Block  {
+public class dmBlock  {
     public List<GameObject> squareList = new List<GameObject>();
-    public BlockBase bindBase;
-    public void InitBlock(BlockBase blockBase)
+    public dmBlockBase bindBase;
+    public void InitBlock(dmBlockBase blockBase)
     {
         bindBase = blockBase;
     }

@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
  
  
-public class BlockBuilder : MonoBehaviour {
-    public List<BlockBase> blockBaseList;
+public class dmBlockBuilder : MonoBehaviour {
+    public List<dmBlockBase> blockBaseList;
     public GameObject squarePrefab;
     public Vector2 squareSize;
     [HideInInspector]
-    public Block nowBlock;
+    public dmBlock nowBlock;
     public void BuildRandomBlock()
     {
         if(nowBlock!=null)DestroySquares(nowBlock);
-        BlockBase inBuildingBlock = blockBaseList[Random.Range(0, blockBaseList.Count)];
-        nowBlock = new Block();
+        dmBlockBase inBuildingBlock = blockBaseList[Random.Range(0, blockBaseList.Count)];
+        nowBlock = new dmBlock();
         nowBlock.InitBlock(inBuildingBlock);
         foreach (Vector2 vec in inBuildingBlock.squareCoordList)
         {
@@ -24,7 +24,7 @@ public class BlockBuilder : MonoBehaviour {
             nowBlock.squareList.Add(newSquare);
         }
     }
-    public void DestroySquares(Block block)
+    public void DestroySquares(dmBlock block)
     {
         foreach(GameObject squareInstance in block.squareList)
         {

@@ -5,12 +5,12 @@ using UnityEditor;
 using UnityEditorInternal;
 
 
-[CustomEditor(typeof(BlockBase))]
-public class BlockBaseEditor : Editor
+[CustomEditor(typeof(dmBlockBase))]
+public class dmBlockBaseEditor : Editor
 {
-    BlockBase targetBlock
+    dmBlockBase targetBlock
     {
-        get { return target as BlockBase; }
+        get { return target as dmBlockBase; }
     }
     public override void OnInspectorGUI()
     {

@@ -4,11 +4,11 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "NewBlock", menuName = "Tetris/BlockBase")]
-public class BlockBase : ScriptableObject
+public class dmBlockBase : ScriptableObject
 {
     public Vector2 blockSize;
     public List<Vector2> squareCoordList;
-    public BlockBase()
+    public dmBlockBase()
     {
         squareCoordList = new List<Vector2>();
     }
